@@ -167,7 +167,6 @@ $(document).ready(function(){
         
         for (var runColors = 0; runColors < colorsLength; runColors++) {
             if (hex == colors[runColors].hex) {
-                
                 $("#colorNameSelect").val(colors[runColors].color); 
             }
         }
