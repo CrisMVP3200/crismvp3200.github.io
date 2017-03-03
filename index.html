@@ -2,32 +2,84 @@
 <html lang="es">
 	<head>
 		<meta charset="UTF-8"/>
-		<meta name="author" content="CrisMVP3200"/>
-		<meta name="description" content="Mi página personal"/>
+		<meta name="author" content="Cristian Cajiao S."/>
+		<meta name="description" content="Mi portafolio"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/> 
+        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
-        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>		
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"/>  
-		<title>Mi página personal</title>
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+        
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"/>
+        
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        
+        <link rel="stylesheet" href="css/style.css"/>       
+		<title>Mi portafolio</title>
 	</head>
 
 	<body>
-		<header>
-			<div class="container">
-				<h1>Mi página personal</h1>
+		<header class="header">
+			<div class="container-fluid text-center">
+				<h1 class="text-uppercase">Mi portafolio</h1>
 			</div>
 		</header>
 		<main>
-			<div class="container">
-				<p>Esta es mi página personal</p>	
+			<div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8 main-column"> 
+                        <h2 class="text-uppercase">Página Web de Maureen Cooper English Center</h2>
+                        
+                        <p><i class="fa fa-chevron-circle-right"></i> <a href="http://www.englishcenter.cl">www.englishcenter.cl</a></p>
+
+                        
+                        <p>Página del insituto de inglés Maureen Cooper English Center.</p>
+                        
+                        <p>Figuran los cursos ofrecidos por dicho instituto, ubicación y contacto.</p>
+                        
+                        <img src="images/englishcenter.png" class="img-responsive img-rounded"/> 
+                        
+                        <hr/>
+                        
+                        <h2 class="text-uppercase">Selecciona un color</h2>
+                        
+                        <p><i class="fa fa-chevron-circle-right"></i> <a href="https://crismvp3200.github.io/selectcolor/">crismvp3200.github.io/selectcolor</a></p>
+                        
+                        <p>Herramienta online para seleccionar un color.</p>
+                        
+                        <p>Esta herramienta permite seleccionar un color por valor hexadecimal, valores de colores RGB, o nombre. Muy útil para desarrolladores web front-end.</p>
+                                  
+                        <img src="images/selectcolor.png" class="img-responsive img-rounded"/>
+                    </div>
+
+                    <div class="col-md-4 sidebar-column text-center">
+                        <img src="images/imagenperfil.png" width="200px" height="200px"  class="img-rounded "/>
+                        
+                        <p><b>Cristian Cajiao Skarnic</b></p>
+                        <p>Titulado de Ingeniería de Ejecución en Informática, Universidad Técnica Federico Santa María.</p>
+                    </div>
+                </div>
 			</div>
-			<hr/>
 		</main>
 		<footer>
-			<div class="container">
-			    <p>CrisMVP3200</p> 
+			<div class="container-fluid text-center">
+			    <p class="text-uppercase">Cristian Cajiao Skarnic | 
+                    <a href="javascript:void(0)" data-toggle="tooltip" title="cristian.cajiao[at]alumnos.usm.cl">
+                        <span class="fa fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-envelope fa-stack-1x"></i>
+                    </span>
+                    </a>
+                    
+                    
+                </p> 
 		    </div>
 		</footer>
+        
+        <div class="upicon">
+            <a href="javascript:void(0)">
+                <i class="fa fa-angle-double-up fa-3x"></i>
+            </a>    
+        </div>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 		
@@ -35,5 +87,8 @@
 		integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+        
+        <script src="scripts/tooltip.js"></script>
+        <script src="scripts/navigation.js"></script>
 	</body>
 </html>

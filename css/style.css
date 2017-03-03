@@ -1,0 +1,70 @@
+body {
+    font-family: Montserrat, Arial; 
+}
+
+header .container-fluid {
+    padding: 2em 1em;
+    color: white;
+    background-color: firebrick;
+}
+
+main .row {
+    padding: 1em 1em;
+}
+
+.main-column img {
+    margin-bottom: 1em; 
+    border: 2px solid black; 
+}
+
+.sidebar-column img {
+    margin-bottom: 1em; 
+}
+
+footer .container-fluid {
+    padding: 1em 1em;
+    color: white; 
+    background-color: firebrick;
+}
+
+footer p {
+    font-weight: bold;
+}
+
+footer a .fa .fa-envelope {
+    color: firebrick;
+}
+
+footer a .fa .fa-circle {
+    color: white;
+}
+
+
+footer .tooltip-inner {
+    font-family: Montserrat, Arial; 
+    font-weight: bold; 
+    padding: 0.25em; 
+}
+
+.upicon {
+    position: fixed;
+    bottom: 1em;
+    right: 1em; 
+    width: 50px;
+    height: 50px;
+    background-color: firebrick; 
+    text-align: center;
+    margin: auto 0px;
+    border: 2px solid black;
+    display: none;
+    opacity: 0.5;
+}
+
+.upicon a .fa-angle-double-up {
+    color: white; 
+}
+
+.upicon a .fa-square {
+    color: firebrick; 
+    border: 1px solid black;
+}
