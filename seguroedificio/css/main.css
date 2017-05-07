@@ -80,3 +80,21 @@ footer hr {
     margin-top:0em;
     border: 1px solid black;
 }
+
+/* Navegación general */
+
+.upicon {
+    position: fixed;
+    bottom: 1em;
+    right: 2em; 
+    opacity: 0.5;
+    text-align:right;
+}
+
+.upicon .fa-angle-double-up{
+    color: white; 
+}
+
+.upicon .fa-square {
+    color: steelblue;
+}
