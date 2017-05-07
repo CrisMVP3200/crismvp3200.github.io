@@ -1,0 +1,31 @@
+.row-main {
+    padding: 7em 0em;
+    background-image: url('../images/seguroedificio_home.jpg');
+    background-size: cover;  
+    background-repeat: no-repeat; 
+}
+
+.row-main h1 {
+    font-weight: bold; 
+    margin: 1em 0em; 
+    padding: 0em 1em;
+    color: white; 
+}
+
+.row-main h2 {
+    font-weight: bold; 
+    margin: 1em 0em; 
+    padding: 0em 1em;
+    color: white; 
+}
+
+.row-main button {
+    font-weight: bold; 
+    margin: 1em 0em; 
+    color: white; 
+    background-color: #2061ac;
+}
+
+.row-main button:hover {
+    background-color: crimson; 
+}

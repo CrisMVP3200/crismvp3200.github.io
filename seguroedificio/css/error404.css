@@ -1,0 +1,9 @@
+.row-error404 {
+    padding: 7em 0em;
+    background-color: #2061ac;
+}
+
+.row-error404 h1, .row-error404 h2 {
+    font-weight: bold;
+    color: white; 
+}
