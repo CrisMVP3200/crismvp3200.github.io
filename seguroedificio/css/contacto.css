@@ -1,5 +1,9 @@
-.contact-header {
+.contact {
     padding: 3em 0em; 
+}
+
+.contact-header {
+    padding: 2em 0em; 
 }
 
 .contactheader-title1 {
@@ -10,6 +14,10 @@
 .contactheader-title2 {
     font-weight: bold; 
     color: #2061ac;
+}
+
+.contact-form {
+    padding: 0em 1em; 
 }
 
 .contact-form form label {
@@ -24,4 +32,8 @@
     background-color: #2061ac;
     font-weight: bold; 
     color: white; 
+}
+
+.contact-form form textarea {
+    resize: vertical; 
 }
