@@ -1,3 +1,27 @@
-.row-contact {
-    background-color: crimson;
+.contact-header {
+    padding: 3em 0em; 
+}
+
+.contactheader-title1 {
+    font-weight: bold;
+    color: #cococo;
+}
+
+.contactheader-title2 {
+    font-weight: bold; 
+    color: #2061ac;
+}
+
+.contact-form form label {
+    color: #333; 
+}
+.contact-form form input[type=text], .contact-form form input[type=email],
+.contact-form form textarea {
+    background-color: #ecf0f1; 
+}
+
+.contact-form form input[type=submit] {
+    background-color: #2061ac;
+    font-weight: bold; 
+    color: white; 
 }
