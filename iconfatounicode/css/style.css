@@ -1,0 +1,37 @@
+body {
+  font-family: 'Roboto', sans-serif;  
+}
+
+header {
+    padding: 2em; 
+    background-color: cornflowerblue;
+    color: white; 
+}
+
+main {
+    padding: 3em 2em;
+}
+
+.nav {
+    font-weight: bold; 
+    font-size: 1.25em; 
+}
+
+
+#hexToFa, #faToHex {
+    padding: 1em 2em; 
+}
+
+#hexToFaResult, #faToHexResult {
+    display: none; 
+}
+
+footer {
+    padding: 2em;
+    background-color: cornflowerblue;
+    color: white; 
+}
+
+footer a {
+    color: black; 
+}
