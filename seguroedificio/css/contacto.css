@@ -17,12 +17,13 @@
 }
 
 .contact-form {
-    padding: 0em 1em; 
+    padding: 0em 2em; 
 }
 
 .contact-form form label {
     color: #333; 
 }
+
 .contact-form form input[type=text], .contact-form form input[type=email],
 .contact-form form textarea {
     background-color: #ecf0f1; 

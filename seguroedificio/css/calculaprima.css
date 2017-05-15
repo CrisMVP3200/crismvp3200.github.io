@@ -1,3 +1,68 @@
-.row-prime {
-    background-color: crimson;
+.prime {
+    padding: 3em 0em; 
+}
+
+.prime-input {
+    margin: 0em auto; 
+    padding: 0em auto;
+}
+
+.prime-input h2 {
+    font-weight: bold; 
+}
+
+.prime-input .input-group-addon, .prime-input .btn {
+    font-size: 1.2em !important; 
+}
+
+.prime-next {
+    padding: 2em 0em; 
+}
+
+.prime-compute {
+    padding: 2em 0em;
+    display:none;
+}
+
+.prime-compute h1 {
+    font-weight: bold; 
+}
+
+.prime-compute-range {
+    color: darkblue; 
+}
+
+.prime-compute h2 {
+    font-weight: bold; 
+}
+
+.prime-next h3 {
+    font-weight: bold; 
+}
+
+.insurance {
+    display:none; 
+    padding: 3em 1em;
+}
+
+.insurance form h3 {
+    font-weight: bold; 
+}
+
+.insurance-form label {
+    color: #333; 
+}
+
+.insurance form input[type=text] {
+    /* background-color: #ecf0f1; */
+}
+
+.insurance form button[type=submit] {
+    background-color: #2061ac;
+    font-weight: bold; 
+    color: white; 
+}
+
+.prime-disclaimer {
+    padding: 2em 0em; 
 }

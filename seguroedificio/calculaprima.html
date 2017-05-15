@@ -50,12 +50,128 @@
 		</header>
 		<main>
 			<div class="container-fluid">
-				<div class="row row-prime">
-					<div class="col-xs-12">
-						<p>Calcula tu prima</p>
-					</div>
-				</div>
+				<div class="prime text-center">
+                    <div class="prime-input">
+                        <h2>Ingrese el monto que desea asegurar:</h2>
+                        <br/>
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">Monto asegurado</div>
+                                    <input id="primeAmount" type="text" class="form-control" placeholder="Monto"/>
+                                    <div class="input-group-addon">UF</div>
+                                </div>
+                            </div>
+                            <button id="calculatePrime" class="btn btn-default">Calcular</button>
+                        </div>
+                    </div>
+                    
+                    <div class="prime-compute text-center">
+                        <h2 class="">Valor estimado prima anual (rango):</h1>
+                        <h2 class="prime-compute-range">[<span id="leftRange">a</span>, <span id="rightRange">b</span>] UF</h2>
+                        
+                        <div class="prime-next row">
+                            <div class="col-md-9">
+                                <h3>Si deseas continuar con la cotización por favor presiona adelante:</h3>
+                            </div>
+                            <div class="col-md-3">
+                                <a id="goToInsurance" href="javascript:void(0)">
+                                    <img src="images/forwards.png"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="insurance">
+                    <div class="insurance-form">
+                        <form action="javascript:void(0)">
+                            <div class="row">
+                                <!-- Datos & Monto -->
+                                <div class="col-md-6">
+                                    <h3>Datos del seguro para la cotización del edificio:</h3>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="amount">Monto asegurable:</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="amount" name="amount" disabled/>
+                                            <div class="input-group-addon">UF</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">Nombre de comunidad del edificio:</label>
+                                        <input type="text" class="form-control" id="name" name="name"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="rut">Rut de comunidad del edificio:</label>
+                                        <input type="text" class="form-control" id="rut" name="rut"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="location">Ubicación del edificio:</label>
+                                        <input type="text" class="form-control" id="location" rut="location"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="year">Año de construcción:</label>
+                                        <input type="text" class="form-control" id="year" name="year"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="floorsNumber">Número de pisos del edificio:</label>
+                                        <input type="text" class="form-control" id="floorsNumber" name="floorsNumber"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="contactPhone">Teléfono de contacto del edificio:</label>
+                                        <input type="text" class="form-control" id="contactPhone" name="contactPhone"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 text-center">
+                                    <button type="submit" class="btn btn-default">Enviar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                    
+                <div class="prime-disclaimer text-center">
+                    <p>*Valor prima anual incluye cobertura contra incendios, terremotos, espacios comunes.</p>
+                </div>
 			</div>
+            
+            <div id="primeToInsuranceError" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Error: No se ha ingresado un monto a asegurar</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Antes de poder ingresar los datos para la cotización, se debe ingresar primero el monto en UF que se dese asegurar.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>    
+            </div>
 		</main>
 		<footer>
 			<div class="container-fluid text-center">
@@ -85,5 +201,7 @@
 	    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
         
         <script src="scripts/navigation.js"></script>
+        <script src="scripts/primeCalculation.js"></script>
+        <script src="scripts/processPrice.js"></script>
 	</body>
 </html>
