@@ -29,6 +29,7 @@
 }
 
 .prime-compute-range {
+    font-weight: bold; 
     color: darkblue; 
 }
 
@@ -38,6 +39,14 @@
 
 .prime-next h3 {
     font-weight: bold; 
+}
+
+.prime-next img {
+    margin: 0em 1em; 
+}
+
+.prime-next-title {
+    display: inline; 
 }
 
 .insurance {
@@ -65,4 +74,8 @@
 
 .prime-disclaimer {
     padding: 2em 0em; 
+}
+
+.prime-disclaimer p {
+    font-size: 0.8em; 
 }

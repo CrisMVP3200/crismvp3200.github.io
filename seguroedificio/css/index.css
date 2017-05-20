@@ -1,25 +1,29 @@
 .row-main {
-    padding: 7em 0em;
+    padding: 1em 0em 12em 0em; 
     background-image: url('../images/seguroedificio_home.jpg');
     background-size: cover;  
     background-repeat: no-repeat; 
 }
 
-.row-main h1 {
+.row-main .row-main-title1 {
     font-weight: bold; 
+    margin: 1em 0em; 
+    padding: 0em 0.5em;
+    color: white; 
+}
+
+.row-main .row-main-title2 {
     margin: 1em 0em; 
     padding: 0em 1em;
     color: white; 
 }
 
-.row-main h2 {
-    font-weight: bold; 
-    margin: 1em 0em; 
-    padding: 0em 1em;
-    color: white; 
+.row-main-button {
+    padding: 4em 0em; 
 }
 
 .row-main button {
+    font-size: 2em; 
     font-weight: bold; 
     margin: 1em 0em; 
     color: white; 
