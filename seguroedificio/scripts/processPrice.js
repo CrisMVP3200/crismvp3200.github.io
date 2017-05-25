@@ -12,19 +12,4 @@ $("form").submit(function(){
             alert("Data: " + data + "\Estado: " + status);
         }
     );
-    /*
-    $.ajax({
-        type: "POST",
-        url: url,
-        data: $("form").serialize(),
-        beforeSend: function() {
-            console.log(data);
-        },
-        success: function(response) {
-            $(".prime").html(response);
-        }
-    });
-    
-    $.post()
-    */
 });

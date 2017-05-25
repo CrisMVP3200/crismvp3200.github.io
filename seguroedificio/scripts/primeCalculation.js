@@ -11,6 +11,26 @@ $(document).ready(function(){
 
     function getPrimeRange(){
         var primeAmount = $("#primeAmount").val();
+        
+        var reverse = 1; 
+        var primeAmountChars = primeAmount.split("");
+        var primeAmountWithPointsReverse = "";
+        for (var i=primeAmountChars.length-1; i >= 0; i--) { 
+            primeAmountWithPointsReverse += primeAmountChars[i];
+            if ((reverse % 3 == 0) && (i != 0)) {
+                 primeAmountWithPointsReverse += ".";
+            }
+            reverse++; 
+        }
+        
+        var primeAmountString = "";
+        primeAmountReverseChars = primeAmountWithPointsReverse.split(""); 
+        for (var i=primeAmountReverseChars.length-1; i >= 0; i--) {
+            primeAmountString += primeAmountReverseChars[i];
+        }
+        
+        $("#primeAmount").val(primeAmountString); 
+        
         var leftRange = parseInt(primeAmount);
         var rightRange = parseInt(primeAmount); 
         
@@ -30,7 +50,6 @@ $(document).ready(function(){
         }
         
         var primeAmount = $("#primeAmount").val(); 
-        primeAmount = parseInt(primeAmount); 
         $("#amount").val(primeAmount);
         $(".prime").css("display", "none");
         $(".insurance").css("display","block");
