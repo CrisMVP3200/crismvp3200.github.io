@@ -1,6 +1,6 @@
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        /* echo "Prespuesto: Exito"; */
+        /* echo "Presupuesto: Exito"; */
         
         require_once dirname(__FILE__).'\class.phpmailer.php';
         
@@ -11,14 +11,7 @@
         $year         = test_input($_POST["year"]);          /* Año de construcción */
         $floorsNumber = test_input($_POST["floorsNumber"]);  /* Número de pisos del edificio */
         $contactPhone = test_input($_POST["contactPhone"]);  /* Teléfono de contacto */ 
-        
-        $amount = utf8_encode($amount);
-        $name = utf8_encode($name);
-        $rut = utf8_encode($rut);
-        $location = utf8_encode($location);
-        $year = utf8_encode($year);
-        $floorsNumber = utf8_encode($floorsNumber);
-        $contactPhone = utf8_encode($contactPhone); 
+        $email        = test_input($_POST["email"]);         /* Email de contacto */  
         
         /* $to = "hola@seguroedificio.cl */
         $to = "loko20.246@gmail.com";
@@ -31,7 +24,7 @@
                 <meta charset="UTF-8">
             </head>
             <body>
-                <h2>Prespuesto</h2>
+                <h2>Presupuesto</h2>
                 <p><b>Monto asegurado:</b> ' . $amount . '</p>
                 <p><b>Nombre de comunidad del edificio:</b> ' . $name . '</p>
                 <p><b>Rut de comunidad del edificio:</b>' . $rut . '</p>
@@ -42,19 +35,7 @@
             </body>
         </html>';
         
-        /*
-        $data = "Monto asegurado: " . $amount .
-                "\nNombre de comunidad del edificio: " . $name .
-                "\nRut de comunidad del edificio: " . $rut . 
-                "\nUbicación del edificio: " . $location .
-                "\nAño de construcción: " . $year .
-                "\nNúmero de pisos del edificio: " . $floorsNumber .
-                "\nTeléfono de contacto del edificio: " . $contactPhone;*/ 
-        
-        // echo $data; 
-        
         $subject = utf8_encode($subject);
-        $message = utf8_encode($message);
         
         $mail = new PHPMailer();
         $mail->CharSet = "UTF-8";

@@ -29,7 +29,7 @@
     background-color: #ecf0f1; 
 }
 
-.contact-form form input[type=submit] {
+.contact-form form button[type=submit] {
     background-color: #2061ac;
     font-weight: bold; 
     color: white; 

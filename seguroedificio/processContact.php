@@ -9,11 +9,6 @@
         $phone   = test_input($_POST["phone"]);    /* Teléfono de contacto */ 
         $message = test_input($_POST["message"]);  /* Mensaje */ 
         
-        $name = utf8_encode($name);
-        $email = utf8_encode($email);
-        $phone = utf8_encode($phone);
-        $message = utf8_encode($message); 
-        
         /* $to = "hola@seguroedificio.cl */
         $to = "loko20.246@gmail.com";
         $subject = "Mensaje de " . $name;
@@ -25,7 +20,7 @@
                 <meta charset="UTF-8">
             </head>
             <body>
-                <h2>Mensaje<h2>
+                <h2>Mensaje</h2>
                 <p><b>Nombre:</b> ' . $name . '</p>
                 <p><b>Email:</b> ' . $email . '</p>
                 <p><b>Teléfono:</b> ' . $phone . '</p>
@@ -33,15 +28,7 @@
             </body>
         </html>';
         
-        /*$data = "Nombre: " . $name . 
-                "\nEmail: " . $email .
-                "\nTelefono: " . $phone .
-                "\nMensaje: " . $message;
-        */
-        // echo $data; 
-        
         $subject = utf8_encode($subject);
-        $message = utf8_encode($message); 
         
         $mail = new PHPMailer();
         $mail->CharSet = "UTF-8";

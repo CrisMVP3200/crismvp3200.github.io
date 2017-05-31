@@ -1,5 +1,7 @@
 $("form").submit(function(){
-    console.log("processContact"); 
+    var formButton = document.getElementById("formButton");
+    formButton.innerHTML = '<i class="fa fa-cog fa-spin"></i> Enviando...';
+    console.log("processPrice"); 
     console.log($("form").serializeArray()); 
     
     var url = "processPrice.php";
