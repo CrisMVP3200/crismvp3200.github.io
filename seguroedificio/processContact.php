@@ -1,6 +1,5 @@
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        /* echo "Contacto: Exito"; */ 
         
         require_once dirname(__FILE__).'\class.phpmailer.php';
         
@@ -42,14 +41,28 @@
         $mail->AddAddress ( $to );
         
         if ($mail->Send()) {
-            echo "Mensaje: Mail enviado";
+            echo '<div class="text-center">
+                      <span class="fa-stack fa-2x">
+                          <i class="fa fa-circle fa-stack-2x" style="color:#2061ac;"></i>
+                          <i class="fa fa-check fa-stack-1x" style="color:white;"></i>
+                      </span>
+                      <h2 style="font-weight:bold;">La consulta fue enviada exitosamente</h2>
+                  </div>'
+                  ;
         } else {
-            echo "Mensaje: Error al enviar el mail"; 
+            echo '<div class="text-center">
+                      <span class="fa-stack fa-2x">
+                          <i class="fa fa-circle fa-stack-2x" style="color:#2061ac;"></i>
+                          <i class="fa fa-times fa-stack-1x" style="color:white;"></i>
+                      </span>
+                      <h2 style="font-weight:bold;>Hubo un error al enviar la consulta</h2>
+                  </div>'
+                 ;  
         }
         
         
     } else {
-        echo "Contacto: Error"; 
+        echo "<p>Acceso no autorizado</p>"; 
     }
 
     function test_input($data) {

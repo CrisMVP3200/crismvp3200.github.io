@@ -1,6 +1,5 @@
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        /* echo "Presupuesto: Exito"; */
         
         require_once dirname(__FILE__).'\class.phpmailer.php';
         
@@ -27,7 +26,7 @@
                 <h2>Presupuesto</h2>
                 <p><b>Monto asegurado:</b> ' . $amount . '</p>
                 <p><b>Nombre de comunidad del edificio:</b> ' . $name . '</p>
-                <p><b>Rut de comunidad del edificio:</b>' . $rut . '</p>
+                <p><b>Rut de comunidad del edificio:</b> ' . $rut . '</p>
                 <p><b>Ubicación del edificio:</b> ' . $location . '</p>
                 <p><b>Año de construcción:</b> ' . $year . '</p>
                 <p><b>Número de pisos del edificio:</b> ' . $floorsNumber . '</p>
@@ -49,13 +48,27 @@
         $mail->AddAddress ( $to );
         
         if ($mail->Send()) {
-            echo "Presupuesto: Mail enviado";
+            echo '<div class="text-center">
+                      <span class="fa-stack fa-2x">
+                          <i class="fa fa-circle fa-stack-2x" style="color:#2061ac;"></i>
+                          <i class="fa fa-check fa-stack-1x" style="color:white;"></i>
+                      </span>
+                      <h2 style="font-weight:bold;">El presupuesto fue enviado exitosamente</h2>
+                  </div>'
+                  ;
         } else {
-            echo "Presupuesto: Error al enviar el mail"; 
+            echo '<div class="text-center">
+                      <span class="fa-stack fa-2x">
+                          <i class="fa fa-circle fa-stack-2x" style="color:#2061ac;"></i>
+                          <i class="fa fa-times fa-stack-1x" style="color:white;"></i>
+                      </span>
+                      <h2 style="font-weight:bold">Hubo un error al enviar el presupuesto</h2>
+                  </div>'
+                 ; 
         }
         
     } else {
-        echo "Presupuesto: Error";
+        echo "<p>Acceso no autorizado</p>";
     }
 
     function test_input($data) {

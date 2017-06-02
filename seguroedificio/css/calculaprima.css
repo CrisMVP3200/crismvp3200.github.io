@@ -1,5 +1,9 @@
-.prime {
+#primeContent {
     padding: 3em 0em; 
+}
+
+.prime {
+    
 }
 
 .prime-input {
@@ -13,6 +17,12 @@
 
 .prime-input .input-group-addon, .prime-input .btn {
     font-size: 1.2em !important; 
+}
+
+#calculatePrime {
+    background-color: #2061ac;
+    font-weight: bold; 
+    color: white; 
 }
 
 .prime-next {
