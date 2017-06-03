@@ -1,7 +1,7 @@
 .row-main {
     padding: 1em 0em 12em 0em; 
     background-image: url('../images/seguroedificio_home.jpg');
-    background-size: contain;  
+    background-size: cover;  
     background-repeat: no-repeat; 
 }
 
