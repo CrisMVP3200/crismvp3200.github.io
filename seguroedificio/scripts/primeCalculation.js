@@ -52,6 +52,7 @@ $(document).ready(function(){
         var primeAmount = $("#primeAmount").val(); 
         $("#amount").val(primeAmount);
         $(".prime").css("display", "none");
+        $(".prime-compute").css("display", "none"); 
         $(".insurance").css("display","block");
     }
 });

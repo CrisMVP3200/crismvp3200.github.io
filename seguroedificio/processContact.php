@@ -8,8 +8,8 @@
         $phone   = test_input($_POST["phone"]);    /* Teléfono de contacto */ 
         $message = test_input($_POST["message"]);  /* Mensaje */ 
         
-        /* $to = "hola@seguroedificio.cl */
-        $to = "loko20.246@gmail.com";
+        $to = "hola@seguroedificio.cl"; 
+        /* $to = "loko20.246@gmail.com"; */
         $subject = "Mensaje de " . $name;
             
         $message = '

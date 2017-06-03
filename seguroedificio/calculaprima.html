@@ -55,37 +55,36 @@
                         <div class="prime-input">
                             <h2>Ingrese el monto que desea asegurar</h2>
                             <br/>
-                            <div class="form-inline">
-                                <div class="form-group">
-                                    <div class="input-group input-lg">
-                                        <div class="input-group-addon">Monto asegurado</div>
-                                        <input id="primeAmount" type="text" class="form-control" placeholder="Monto sin puntos"/>
-                                        <div class="input-group-addon">UF</div>
-                                    </div>
-                                </div>
-                                <button id="calculatePrime" class="btn btn-default">Calcular</button>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-6 col-md-offset-3">
+                                        <input id="primeAmount" type="text" class="form-control input-lg" placeholder="Monto en UF"/>
+                                    </div>    
+                                </div>    
                             </div>
+                            <button id="calculatePrime" class="btn btn-default">Calcular</button>
                         </div>
+                    </div>
                     
-                        <div class="prime-compute text-center">
-                            <h3>Valor estimado prima anual - rango -</h3>
-                            <h2 class="prime-compute-range"><span id="leftRange">a</span> - <span id="rightRange">b</span> UF</h2>
+                    <div class="prime-compute text-center">
+                        <h3>Valor estimado prima anual - rango -</h3>
+                        <h2 class="prime-compute-range"><span id="leftRange">a</span> - <span id="rightRange">b</span> UF</h2>
                         
-                            <div class="prime-next row">
-                                <div class="col-md-12">
-                                    <h4 class="prime-next-title">Si deseas continuar con la cotización por favor presiona adelante</h4> 
-                                    <a id="goToInsurance" href="javascript:void(0)">
-                                        <img src="images/forwards.png"/>
-                                    </a>
-                                </div>
+                        <div class="prime-next row">
+                            <div class="col-md-12">
+                                <h4 class="prime-next-title">Si deseas continuar con la cotización por favor presiona adelante</h4> 
+                                <a id="goToInsurance" href="javascript:void(0)">
+                                    <img src="images/forwards.png"/>
+                                </a>
                             </div>
                         </div>
                     </div>
                     
+                    
                     <div id="insuranceContent" class="insurance">
                         <div class="insurance-form">
                             <form action="javascript:void(0)">
-                                <h3>Datos del seguro para la cotización del edificio</h3>
+                                <h3>Datos del edificio para la cotización del seguro</h3>
                                 <div class="row">
                                     <!-- Datos & Monto -->
                                     <div class="col-md-6">
@@ -179,8 +178,7 @@
 		</main>
 		<footer>
 			<div class="container-fluid text-center">
-                <hr/>
-				<a href="javascript:void(0)">
+				<a href="http://www.inveramerica.cl">
                     <img src="images/inveramerica.png"/>
                 </a>
                 <br/>

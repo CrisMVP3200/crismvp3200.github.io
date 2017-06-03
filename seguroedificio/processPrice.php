@@ -12,8 +12,8 @@
         $contactPhone = test_input($_POST["contactPhone"]);  /* Teléfono de contacto */ 
         $email        = test_input($_POST["email"]);         /* Email de contacto */  
         
-        /* $to = "hola@seguroedificio.cl */
-        $to = "loko20.246@gmail.com";
+        $to = "hola@seguroedificio.cl";
+        /* $to = "loko20.246@gmail.com"; */
         $subject = "Presupuesto de " . $name;
         
         $message = '

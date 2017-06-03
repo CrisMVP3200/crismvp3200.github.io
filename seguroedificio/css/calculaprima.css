@@ -19,6 +19,10 @@
     font-size: 1.2em !important; 
 }
 
+.prime-input input[placeholder] {
+    font-weight: bold; 
+}
+
 #calculatePrime {
     background-color: #2061ac;
     font-weight: bold; 
