@@ -1,7 +1,7 @@
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
-        require_once 'class.phpmailer.php';
+        require_once dirname(__FILE__).'\class.phpmailer.php';
         
         $name    = test_input($_POST["name"]);     /* Nombre */
         $email   = test_input($_POST["email"]);    /* Email */
@@ -9,6 +9,7 @@
         $message = test_input($_POST["message"]);  /* Mensaje */ 
         
         $to = "hola@seguroedificio.cl"; 
+        /* $to = "loko20.246@gmail.com"; */
         $subject = "Mensaje de " . $name;
             
         $message = '

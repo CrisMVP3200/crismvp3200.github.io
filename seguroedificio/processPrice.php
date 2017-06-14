@@ -1,7 +1,7 @@
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
-        require_once 'class.phpmailer.php';
+        require_once dirname(__FILE__).'\class.phpmailer.php';
         
         $amount       = test_input($_POST["amount"]);        /* Monto asegurado */ 
         $name         = test_input($_POST["name"]);          /* Nombre de comunidad del edificio */     
@@ -13,6 +13,7 @@
         $email        = test_input($_POST["email"]);         /* Email de contacto */  
         
         $to = "hola@seguroedificio.cl";
+        /* $to = "loko20.246@gmail.com"; */
         $subject = "Presupuesto de " . $name;
         
         $message = '
