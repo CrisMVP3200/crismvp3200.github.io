@@ -93,3 +93,12 @@
 .prime-disclaimer p {
     font-size: 0.8em; 
 }
+
+.modal-header {
+    background-color: #2061ac !important;
+    color: white !important; 
+}
+
+.modal-header button {
+    color: white !important; 
+}
