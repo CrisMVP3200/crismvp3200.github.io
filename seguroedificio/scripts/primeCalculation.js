@@ -1,4 +1,9 @@
-var calculatePrime; 
+var calculatePrime;
+var primeAmount;
+var primeAmountChars, primeAmountWithPointsReverse; 
+var primeAmountString;
+var reverse; 
+var leftRange, rightRange;
 
 $(document).ready(function(){
     calculatePrime = document.getElementById("calculatePrime");
@@ -11,36 +16,40 @@ $(document).ready(function(){
 
     function getPrimeRange(){
         var primeAmount = $("#primeAmount").val();
-        
-        var reverse = 1; 
-        var primeAmountChars = primeAmount.split("");
-        var primeAmountWithPointsReverse = "";
-        for (var i=primeAmountChars.length-1; i >= 0; i--) { 
-            primeAmountWithPointsReverse += primeAmountChars[i];
-            if ((reverse % 3 == 0) && (i != 0)) {
-                 primeAmountWithPointsReverse += ".";
+        console.log(primeAmount); 
+        if (!isNaN(primeAmount)) {
+            reverse = 1; 
+            primeAmountChars = primeAmount.split("");
+            primeAmountWithPointsReverse = "";
+            for (var i=primeAmountChars.length-1; i >= 0; i--) { 
+                primeAmountWithPointsReverse += primeAmountChars[i];
+                if ((reverse % 3 == 0) && (i != 0)) {
+                     primeAmountWithPointsReverse += ".";
+                }
+                reverse++; 
             }
-            reverse++; 
+        
+            var primeAmountString = "";
+            primeAmountReverseChars = primeAmountWithPointsReverse.split(""); 
+            for (var i=primeAmountReverseChars.length-1; i >= 0; i--) {
+                primeAmountString += primeAmountReverseChars[i];
+            }
+        
+            $("#primeAmount").val(primeAmountString); 
+        
+            leftRange = parseInt(primeAmount);
+            rightRange = parseInt(primeAmount); 
+        
+            leftRange = Math.floor(leftRange * 0.0014);
+            rightRange = Math.floor(rightRange * 0.00186);
+        
+            document.getElementById("leftRange").innerHTML = leftRange;
+            document.getElementById("rightRange").innerHTML = rightRange;
+        
+            $(".prime-compute").css("display","block"); 
+        } else {
+            $("#notANumberModal").modal(); 
         }
-        
-        var primeAmountString = "";
-        primeAmountReverseChars = primeAmountWithPointsReverse.split(""); 
-        for (var i=primeAmountReverseChars.length-1; i >= 0; i--) {
-            primeAmountString += primeAmountReverseChars[i];
-        }
-        
-        $("#primeAmount").val(primeAmountString); 
-        
-        var leftRange = parseInt(primeAmount);
-        var rightRange = parseInt(primeAmount); 
-        
-        leftRange = Math.floor(leftRange * 0.0014);
-        rightRange = Math.floor(rightRange * 0.00186);
-        
-        document.getElementById("leftRange").innerHTML = leftRange;
-        document.getElementById("rightRange").innerHTML = rightRange;
-        
-        $(".prime-compute").css("display","block"); 
     }
     
     function showInsuranceForm() {
