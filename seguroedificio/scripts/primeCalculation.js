@@ -16,7 +16,7 @@ $(document).ready(function(){
 
     function getPrimeRange(){
         var primeAmount = $("#primeAmount").val();
-        console.log(primeAmount); 
+        // console.log(primeAmount); 
         if (!isNaN(primeAmount)) {
             reverse = 1; 
             primeAmountChars = primeAmount.split("");

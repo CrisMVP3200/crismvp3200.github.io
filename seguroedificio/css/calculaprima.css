@@ -86,6 +86,10 @@
     color: white; 
 }
 
+.has-error {
+    color: crimson; 
+}
+
 .prime-disclaimer {
     padding: 2em 0em; 
 }

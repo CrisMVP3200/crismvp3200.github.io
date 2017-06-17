@@ -15,7 +15,7 @@
 		<title>SeguroEdificio | Calcula tu prima</title>
 	</head>
 
-	<body>
+	<body ng-app="app" ng-controller="FormCtrl as main">
 		<header>
             <nav class="navbar">
                 <div class="container-fluid">
@@ -83,7 +83,7 @@
                     
                     <div id="insuranceContent" class="insurance">
                         <div class="insurance-form">
-                            <form action="javascript:void(0)">
+                            <form name="primeForm" action="javascript:void(0)" novalidate>
                                 <h3>Datos del edificio para la simulación del seguro</h3>
                                 <div class="row">
                                     <!-- Datos & Monto -->
@@ -91,15 +91,21 @@
                                         <div class="form-group">
                                             <label for="amount">Monto asegurable</label>
                                             <div class="input-group">
-                                                <input type="text" class="form-control" id="amount" name="amount" readonly/>
+                                                <input type="text" class="form-control" id="amount" name="amount" ng-model="amount" readonly/>
                                                 <div class="input-group-addon">UF</div>
+                                            </div>
+                                            <div ng-show="primeForm.amount.$touched && primeForm.amount.$error" ng-class="{'has-error':primeForm.amount.$touched && primeForm.amount.$invalid}">
+                                                <div ng-show="primeForm.amount.$error.required">Se requiere este campo</div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="name">Nombre de comunidad del edificio</label>
-                                            <input type="text" class="form-control" id="name" name="name"/>
+                                            <input type="text" class="form-control" id="name" name="name" ng-model="name" required/>
+                                            <div ng-show="primeForm.name.$touched && primeForm.name.$error" ng-class="{'has-error':primeForm.name.$touched && primeForm.name.$invalid}">
+                                                <div ng-show="primeForm.name.$error.required">Se requiere este campo</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -107,13 +113,20 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="rut">Rut de comunidad del edificio</label>
-                                            <input type="text" class="form-control" id="rut" name="rut"/>
+                                            <input type="text" class="form-control" id="rut" name="rut" ng-model="rut" placeholder="12345678-9" ng-pattern="/[0-9]{1,8}-[0-9kK]/" required/>
+                                            <div ng-show="primeForm.rut.$touched && primeForm.rut.$error" ng-class="{'has-error':primeForm.rut.$touched && primeForm.rut.$invalid}">
+                                                <div ng-show="primeForm.rut.$error.required">Se requiere este campo</div>
+                                                <div ng-show="primeForm.rut.$error.pattern">El rut ingresado no es válido</div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="location">Ubicación del edificio</label>
-                                            <input type="text" class="form-control" id="location" name="location"/>
+                                            <input type="text" class="form-control" id="location" name="location" ng-model="location" required/>
+                                            <div ng-show="primeForm.location.$touched && primeForm.location.$error" ng-class="{'has-error':primeForm.location.$touched && primeForm.location.$invalid}">
+                                                <div ng-show="primeForm.location.$error.required">Se requiere este campo</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -121,13 +134,19 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="year">Año de construcción</label>
-                                            <input type="text" class="form-control" id="year" name="year"/>
+                                            <input type="text" class="form-control" id="year" name="year" ng-model="year" required/>
+                                            <div ng-show="primeForm.year.$touched && primeForm.year.$error" ng-class="{'has-error':primeForm.year.$touched && primeForm.year.$invalid}">
+                                                <div ng-show="primeForm.year.$error.required">Se requiere este campo</div>
+                                            </div>
                                         </div>
                                     </div>
                                    <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="floorsNumber">Número de pisos del edificio</label>
-                                            <input type="text" class="form-control" id="floorsNumber" name="floorsNumber"/>
+                                            <input type="number" class="form-control" id="floorsNumber" name="floorsNumber" ng-model="floorsNumber" required/>
+                                            <div ng-show="primeForm.floorsNumber.$touched && primeForm.floorsNumber.$error" ng-class="{'has-error':primeForm.floorsNumber.$touched && primeForm.floorsNumber.$invalid}">
+                                                <div ng-show="primeForm.floorsNumber.$error.required">Se requiere este campo</div>
+                                            </div>
                                         </div>
                                    </div>
                                 </div>
@@ -135,19 +154,27 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="contactPhone">Teléfono de contacto</label>
-                                            <input type="text" class="form-control" id="contactPhone" name="contactPhone"/>
+                                            <input type="text" class="form-control" id="contactPhone" name="contactPhone" placeholder="+56 XXX XXX XXX" ng-pattern="/\+56[0-9]{9}/" ng-model="contactPhone" required/>
+                                            <div ng-show="primeForm.contactPhone.$touched && primeForm.contactPhone.$error" ng-class="{'has-error':primeForm.contactPhone.$touched && primeForm.contactPhone.$invalid}">
+                                                <div ng-show="primeForm.contactPhone.$error.required">Se requiere este campo</div>
+                                                <div ng-show="primeForm.contactPhone.$error.pattern">El número ingresado no es válido</div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="email">Correo de contacto</label>
-                                            <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@mail.com"/>
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@mail.com" ng-model="email" required/>
+                                            <div ng-show="primeForm.email.$touched && primeForm.email.$error" ng-class="{'has-error':primeForm.email.$touched && primeForm.email.$invalid}">
+                                                <div ng-show="primeForm.email.$error.required">Se requiere este campo</div>
+                                                <div ng-show="primeForm.email.$error.email">Se debe ingresar un correo válido</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-xs-12 text-center">
-                                        <button id="formButton" type="submit" class="btn btn-default">Enviar</button>
+                                        <button id="formButton" type="submit" class="btn" ng-disabled="primeForm.$invalid">Enviar</button>
                                     </div>
                                 </div>
                             </form>
@@ -212,10 +239,13 @@
         
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         
-	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-messages.js"></script>
         
         <script src="scripts/navigation.js"></script>
         <script src="scripts/primeCalculation.js"></script>
         <script src="scripts/processPrice.js"></script>
+        
+        <script src="scripts/primeApp.js"></script>
 	</body>
 </html>

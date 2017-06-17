@@ -15,7 +15,7 @@
 		<title>SeguroEdificio | Contacto</title>
 	</head>
 
-	<body>
+	<body ng-app="app" ng-controller="MainCtrl as main">
 		<header>
             <nav class="navbar">
                 <div class="container-fluid">
@@ -55,29 +55,43 @@
                     <h1 class="contactheader-title2">¡Escríbenos!</h1>
                 </div>
 			    <div class="container-fluid contact-form">
-				    <form action="javascript:void(0)">
+				    <form name="contactForm" action="javascript:void(0)" novalidate>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="name">Nombre</label>
-                                    <input type="text" class="form-control" id="name" name="name"/>
+                                    <input type="text" class="form-control" id="name" name="name" ng-model="name" required/>
+                                    <div ng-show="contactForm.name.$touched && contactForm.name.$error" ng-class="{'has-error':contactForm.name.$touched && contactForm.name.$invalid}">
+                                        <div ng-show="contactForm.name.$error.required">Se requiere este campo</div>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Correo electrónico</label>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@email.com"/>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@email.com" ng-model="email" required/>
+                                     <div ng-show="contactForm.email.$touched && contactForm.email.$error" ng-class="{'has-error':contactForm.email.$touched && contactForm.email.$invalid}">
+                                         <div ng-show="contactForm.email.$error.required">Se requiere este campo</div>
+                                         <div ng-show="contactForm.email.$error.email">Se debe ingresar un correo válido</div>
+                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="phone">Teléfono de contacto</label>
-                                    <input type="text" class="form-control" id="phone" name="phone">
+                                    <input type="text" class="form-control" id="phone" name="phone" placeholder="+56 XXX XXX XXX" ng-pattern="/\+56[0-9]{9}/" ng-model="phone" required>
+                                    <div ng-show="contactForm.phone.$touched && contactForm.phone.$error" ng-class="{'has-error':contactForm.phone.$touched && contactForm.phone.$invalid}">
+                                        <div ng-show="contactForm.phone.$error.required">Se requiere este campo</div>
+                                        <div ng-show="contactForm.phone.$error.pattern">El número ingresado no es válido</div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="message">Mensaje</label>
-                                    <textarea class="form-control" rows="6" id="message" name="message"></textarea>
+                                    <textarea class="form-control" rows="6" id="message" name="message" ng-model="message" required></textarea>
+                                    <div ng-show="contactForm.message.$touched && contactForm.message.$error" ng-class="{'has-error':contactForm.message.$touched && contactForm.message.$invalid}">
+                                        <div ng-show="contactForm.message.$error.required">Se requiere este campo</div>
+                                    </div>
                                 </div>
                                 <div class="form-group text-right">
-                                    <button id="formButton" class="btn btn-default" type="submit">Enviar</button>  
+                                    <button id="formButton" class="btn" type="submit" ng-disabled="contactForm.$invalid">Enviar</button>  
                                 </div>
                             </div>
                         </div>
@@ -104,9 +118,12 @@
         
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         
-	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-messages.js"></script>
         
         <script src="scripts/navigation.js"></script>
         <script src="scripts/processContact.js"></script>
+        
+        <script src="scripts/contactApp.js"></script>
 	</body>
 </html>
