@@ -15,7 +15,7 @@
 		<title>SeguroEdificio | Calcula tu prima</title>
 	</head>
 
-	<body ng-app="app" ng-controller="FormCtrl as main">
+	<body ng-app="app">
 		<header>
             <nav class="navbar">
                 <div class="container-fluid">
@@ -80,8 +80,7 @@
                         </div>
                     </div>
                     
-                    
-                    <div id="insuranceContent" class="insurance">
+                    <div id="insuranceContent" class="insurance" ng-controller="FormCtrl">
                         <div class="insurance-form">
                             <form name="primeForm" action="javascript:void(0)" novalidate>
                                 <h3>Datos del edificio para la simulación del seguro</h3>
@@ -223,10 +222,10 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Valor ingresado inválido</h4>
+                        <h4 class="modal-title">No se ha calculado el rango</h4>
                     </div>
                     <div class="modal-body">
-                        <p>El valor ingresado no es un número.</p>
+                        <p>El valor ingresado es inválido.</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
