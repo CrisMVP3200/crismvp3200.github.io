@@ -153,7 +153,10 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="contactPhone">Teléfono de contacto</label>
-                                            <input type="text" class="form-control" id="contactPhone" name="contactPhone" placeholder="+56 XXX XXX XXX" ng-pattern="/\+56[0-9]{9}/" ng-model="contactPhone" required/>
+                                            <div class="input-group">
+                                                <span class="input-group-addon">+</span>
+                                                <input type="text" class="form-control" id="contactPhone" name="contactPhone" placeholder="56 XXX XXX XXX" ng-pattern="/56[0-9]{9}/" ng-model="contactPhone" required/>
+                                            </div>
                                             <div ng-show="primeForm.contactPhone.$touched && primeForm.contactPhone.$error" ng-class="{'has-error':primeForm.contactPhone.$touched && primeForm.contactPhone.$invalid}">
                                                 <div ng-show="primeForm.contactPhone.$error.required">Se requiere este campo</div>
                                                 <div ng-show="primeForm.contactPhone.$error.pattern">El número ingresado no es válido</div>
