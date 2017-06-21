@@ -16,6 +16,7 @@ $(document).ready(function(){
 
     function getPrimeRange(){
         var primeAmount = $("#primeAmount").val();
+        primeAmount = parseInt(primeAmount).toString();
         if (primeAmount === "") {
             $("#notANumberModal").modal(); 
         } else if (!isNaN(primeAmount)) {
@@ -38,8 +39,8 @@ $(document).ready(function(){
         
             $("#primeAmount").val(primeAmountString); 
         
-            leftRange = parseInt(primeAmount);
-            rightRange = parseInt(primeAmount); 
+            leftRange = parseInt(primeAmount, 10);
+            rightRange = parseInt(primeAmount, 10); 
         
             leftRange = Math.floor(leftRange * 0.0014);
             rightRange = Math.floor(rightRange * 0.00186);
