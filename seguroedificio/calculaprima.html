@@ -111,7 +111,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="rut">Rut de comunidad del edificio</label>
+                                            <label for="rut">Rut de comunidad del edificio (Sin puntos y con guión)</label>
                                             <input type="text" class="form-control" id="rut" name="rut" ng-model="rut" placeholder="12345678-9" ng-pattern="/[0-9]{1,8}-[0-9kK]/" required/>
                                             <div ng-show="primeForm.rut.$touched && primeForm.rut.$error" ng-class="{'has-error':primeForm.rut.$touched && primeForm.rut.$invalid}">
                                                 <div ng-show="primeForm.rut.$error.required">Se requiere este campo</div>
