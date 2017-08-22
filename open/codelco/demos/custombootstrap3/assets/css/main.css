@@ -34,3 +34,7 @@ section h1 {
 section .fullImage {
     display: inline; 
 }
+
+.sectionHeader {
+    margin-bottom: 1em; 
+}
