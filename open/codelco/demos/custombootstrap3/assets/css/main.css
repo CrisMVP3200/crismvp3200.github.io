@@ -30,3 +30,7 @@ section h1 small {
 section h1 {
     font-weight: bold; 
 }
+
+section .fullImage {
+    display: inline; 
+}
