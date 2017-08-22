@@ -1,1 +1,30 @@
 
+body {
+    font-family: "Lato", "Verdana", "Arial", "sans-serif"; 
+}
+
+header {
+    color: white;
+    background-image: url("../images/demo_bulldozer_onepage_head.jpg");
+    background-attachment: fixed;
+    background-size: cover; 
+    padding: 15em 0em; 
+}
+
+header h1 {
+    font-weight: bold; 
+}
+
+section {
+    color: white;
+    background-color: #009db0;
+    padding: 15em 0em; 
+}
+
+section h1 {
+    font-weight: bold; 
+}
+
+section .fullImage {
+    display: inline; 
+}
