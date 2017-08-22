@@ -1,0 +1,58 @@
+#header {
+    background: url("../../../assets/img/custom/demo_bulldozer_onepage_head.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+
+#header .logo-menu a {
+    color: white; 
+}
+
+#header .banner h1 {
+    color: white; 
+}
+
+#header .banner h1 small {
+    color: white; 
+}
+
+#header .banner .scroll a i {
+    color: #009db0; 
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#header .banner .scroll a i:hover {
+    background: #009db0;
+    color: #ffffff; 
+}
+
+#techSpecs {
+    color: #ffffff; 
+    background-color: #009db0; 
+}
+
+#techSpecs h2 small {
+    color: #ffffff; 
+}
+
+#motorSpecs {
+    color: white; 
+    background-color: #009db0; 
+}
+
+#motorSpecs h2 small {
+    color: #ffffff
+}
+
+#footer .scroll-top a i {
+    color: #009db0; 
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#footer .scroll-top a i:hover {
+    opacity: 0.5; 
+}
