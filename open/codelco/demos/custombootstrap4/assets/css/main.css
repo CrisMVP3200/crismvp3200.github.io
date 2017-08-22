@@ -8,17 +8,34 @@ header {
     background-image: url("../images/demo_bulldozer_onepage_head.jpg");
     background-attachment: fixed;
     background-size: cover; 
-    padding: 15em 0em; 
+    padding: 15em 0em 1em 0em; 
 }
 
 header h1 {
     font-weight: bold; 
 }
 
+.headerTitle {
+    margin-bottom: 9em; 
+}
+
+.goDown {
+    margin-bottom: 0em; 
+}
+
+.goDown .fa-circle {
+    color: white; 
+}
+
+.goDown .fa-chevron-down {
+    color: #009db0; 
+}
+
 section {
     color: white;
     background-color: #009db0;
-    padding: 15em 0em; 
+    padding: 15em 0em 1em 0em; 
+    border-bottom: 1px solid #ccc; 
 }
 
 section h1 {
@@ -27,4 +44,24 @@ section h1 {
 
 section .fullImage {
     display: inline; 
+}
+
+.sectionHeader {
+    margin-bottom: 1em; 
+}
+
+.sectionBody {
+    margin-bottom: 1em; 
+}
+
+.sectionExit {
+    margin-bottom: 9em; 
+}
+
+.sectionExit .fa-circle {
+    color: white; 
+}
+
+.sectionExit .fa-chevron-down, .sectionExit .fa-chevron-up {
+    color: #009db0; 
 }
