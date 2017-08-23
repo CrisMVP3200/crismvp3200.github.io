@@ -27,9 +27,6 @@ header {
     }
 }
 
-header h1 {
-    font-weight: bold; 
-}
 
 .headerTitle {
     margin-bottom: 9em; 
@@ -52,10 +49,6 @@ section {
     background-color: #009db0;
     padding: 15em 0em 1em 0em; 
     border-bottom: 1px solid #ccc; 
-}
-
-section h2 {
-    font-weight: bold; 
 }
 
 section .fullImage {
