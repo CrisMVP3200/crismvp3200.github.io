@@ -1,0 +1,10 @@
+body {
+    font-family: "Lato", "Arial"; 
+}
+
+header {
+    color: white; 
+    background-image: url("../images/header.jpg");
+    background-size: cover; 
+    padding: 10em 2em; 
+}
