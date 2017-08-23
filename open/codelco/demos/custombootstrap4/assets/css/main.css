@@ -6,6 +6,9 @@ body {
 header {
     color: white;
     background-image: url("../images/demo_bulldozer_onepage_head.jpg");
+    background-repeat: no-repeat;
+    background-position: center; 
+    -webkit-background-position: center; 
     background-attachment: fixed;
     background-size: cover; 
     -webkit-background-size: cover; 
