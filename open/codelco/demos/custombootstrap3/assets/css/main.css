@@ -6,7 +6,7 @@ header {
     color: white; 
     background-image: url("../images/demo_bulldozer_onepage_head.jpg");
     background-attachment: fixed; 
-    background-size: cover;
+    background-size: cover; 
     padding: 15em 0em 1em 0em; 
 }
 
