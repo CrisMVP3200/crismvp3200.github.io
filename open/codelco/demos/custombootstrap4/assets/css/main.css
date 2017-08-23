@@ -6,12 +6,15 @@ body {
 header {
     color: white;
     background-image: url("../images/demo_bulldozer_onepage_head.jpg");
+    background-size: cover; 
+    /*
     background-repeat: no-repeat;
     background-position: center center; 
     -webkit-background-position: center; 
     background-attachment: fixed;
     background-size: cover; 
     -webkit-background-size: cover; 
+    */
     padding: 15em 0em 1em 0em; 
 }
 
