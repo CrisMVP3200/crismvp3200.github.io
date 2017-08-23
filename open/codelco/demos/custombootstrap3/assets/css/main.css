@@ -5,9 +5,25 @@ body {
 header {
     color: white; 
     background-image: url("../images/demo_bulldozer_onepage_head.jpg");
-    background-attachment: fixed; 
-    background-size: cover; 
     padding: 15em 0em 1em 0em; 
+}
+
+/* col- */
+@media only screen and (max-width: 767px) {
+    header {
+        background-position: center center;   
+        background-attachment: scroll; 
+        background-size: cover; 
+    }
+}
+
+/* col-sm */ 
+@media only screen and (min-width: 768px) {
+    header {
+        background-position: center center;  
+        background-attachment: fixed;  
+        background-size: cover;
+    }
 }
 
 header h1 small {
