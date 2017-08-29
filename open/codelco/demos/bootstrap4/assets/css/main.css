@@ -16,6 +16,7 @@ header {
     header {
         /* background-position: center center; */ 
         /* background-attachment: scroll; */ 
+        background-position: center center; 
         background-size: cover; 
         background-repeat: no-repeat; 
         background-attachment: fixed; 
@@ -27,6 +28,7 @@ header {
     header {
         /* background-position: center center; */ 
         /* background-attachment: fixed; */    
+        background-position: center center; 
         background-size: cover;
         background-repeat: no-repeat; 
         background-attachment: fixed; 
