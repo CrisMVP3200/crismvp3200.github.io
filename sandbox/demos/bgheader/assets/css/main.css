@@ -5,6 +5,21 @@ body {
 header {
     color: white; 
     background-image: url("../images/header.jpg");
+    background-position: center center;
     background-size: cover; 
-    padding: 10em 2em; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    padding: 15em 2em; 
+}
+
+section {
+    padding: 15em 2em; 
+}
+
+#one {
+    background-color: #ff0000; 
+}
+
+#two {
+    background-color: #00ff00; 
 }
