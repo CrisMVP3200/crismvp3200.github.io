@@ -36,7 +36,7 @@
     visibility: hidden; 
 }
 
-.headerslide {
+.headeranim {
     animation-name: headerslide;
     -webkit-animation-name: slide;
     animation-duration: 1s; 
