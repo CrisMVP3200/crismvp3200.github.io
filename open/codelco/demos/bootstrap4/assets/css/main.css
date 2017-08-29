@@ -32,6 +32,10 @@ header {
     margin-bottom: 9em; 
 }
 
+.headerTitle .display-4 strong {
+    font-weight: bold; 
+}
+
 .goDown {
     margin-bottom: 0em; 
 }
