@@ -36,8 +36,8 @@ header {
 }
 
 @media only screen and (max-width: 767px) {
-    .headerTitle .display-4 {
-        font-size: 40px; 
+    .headerTitle h1 {
+        font-size: 32px; 
     }
 }
 
@@ -92,8 +92,8 @@ section .fullImage {
 }
 
 @media only screen and (max-width: 767px) {
-    .sectionHeader h1 {
-        font-size: 32px; 
+    .sectionHeader h2 {
+        font-size: 28px; 
     }
 }
 
