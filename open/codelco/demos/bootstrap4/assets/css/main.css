@@ -35,6 +35,18 @@ header {
     font-weight: bold; 
 }
 
+@media only screen and (max-width: 767px) {
+    .headerTitle .display-4 {
+        font-size: 40px; 
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .headerTitle {
+        
+    }
+}
+
 .goDown {
     margin-bottom: 0em; 
 }
@@ -49,7 +61,7 @@ header {
 
 section {
     color: white;
-    background-color: #009db0;
+    background-color: #009db0; 
     border-bottom: 1px solid #ccc; 
 }
 
@@ -63,7 +75,7 @@ section {
 /* col-sm en adelante */ 
 @media only screen and (min-width: 768px) {
     section {
-        padding: 2em 0em 1em 0em;
+        padding: 4em 0em 1em 0em;
     } 
 }
 
@@ -77,6 +89,18 @@ section .fullImage {
 
 .sectionHeader h1 {
     padding-top: 2em; 
+}
+
+@media only screen and (max-width: 767px) {
+    .sectionHeader h1 {
+        font-size: 32px; 
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .sectionHeader {
+        
+    }
 }
 
 .sectionBody {
@@ -93,7 +117,7 @@ section .fullImage {
 /* col-sm en adelante */ 
 @media only screen and (min-width: 768px) {
     .sectionExit {
-       margin-bottom: 2em; 
+       margin-bottom: 4em; 
     }
 }
 
