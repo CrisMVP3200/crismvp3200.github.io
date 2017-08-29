@@ -10,21 +10,26 @@ header {
     padding: 15em 0em 1em 0em; 
 }
 
+
 /* col- */
 @media only screen and (max-width: 767px) {
     header {
-        background-position: center center;   
-        background-attachment: scroll; 
+        /* background-position: center center; */ 
+        /* background-attachment: scroll; */ 
         background-size: cover; 
+        background-repeat: no-repeat; 
+        background-attachment: fixed; 
     }
 }
 
 /* col-sm en adelante */ 
 @media only screen and (min-width: 768px) {
     header {
-        background-position: center center;  
-        background-attachment: fixed;   
+        /* background-position: center center; */ 
+        /* background-attachment: fixed; */    
         background-size: cover;
+        background-repeat: no-repeat; 
+        background-attachment: fixed; 
     }
 }
 
