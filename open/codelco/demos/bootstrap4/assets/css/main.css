@@ -7,6 +7,10 @@ body {
 header {
     color: white;
     background-image: url("../images/demo_bulldozer_onepage_head.jpg");
+    background-position: center center; 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
     padding: 15em 0em 1em 0em; 
 }
 
@@ -16,10 +20,6 @@ header {
     header {
         /* background-position: center center; */ 
         /* background-attachment: scroll; */ 
-        background-position: center center; 
-        background-size: cover; 
-        background-repeat: no-repeat; 
-        background-attachment: fixed; 
     }
 }
 
@@ -28,10 +28,6 @@ header {
     header {
         /* background-position: center center; */ 
         /* background-attachment: fixed; */    
-        background-position: center center; 
-        background-size: cover;
-        background-repeat: no-repeat; 
-        background-attachment: fixed; 
     }
 }
 
