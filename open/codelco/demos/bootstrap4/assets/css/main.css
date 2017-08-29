@@ -63,7 +63,7 @@ header {
 section {
     color: white;
     background-color: #009db0; 
-    border-bottom: 1px solid #ccc; 
+    /* border-bottom: 1px solid #ccc; */ 
 }
 
 /* col- */
