@@ -18,7 +18,7 @@ header {
     }
 }
 
-/* col-sm */ 
+/* col-sm en adelante */ 
 @media only screen and (min-width: 768px) {
     header {
         background-position: center center;  
@@ -26,7 +26,6 @@ header {
         background-size: cover;
     }
 }
-
 
 .headerTitle {
     margin-bottom: 9em; 
@@ -51,8 +50,21 @@ header {
 section {
     color: white;
     background-color: #009db0;
-    padding: 13em 0em 1em 0em; 
     border-bottom: 1px solid #ccc; 
+}
+
+/* col- */
+@media only screen and (max-width: 767px) {
+    section {
+        padding: 2em 0em 1em 0em;
+    } 
+}
+
+/* col-sm en adelante */ 
+@media only screen and (min-width: 768px) {
+    section {
+        padding: 2em 0em 1em 0em;
+    } 
 }
 
 section .fullImage {
@@ -63,7 +75,7 @@ section .fullImage {
     margin-bottom: 1em; 
 }
 
-.sectionHeader h2 {
+.sectionHeader h1 {
     padding-top: 2em; 
 }
 
@@ -71,8 +83,18 @@ section .fullImage {
     margin-bottom: 1em; 
 }
 
-.sectionExit {
-    margin-bottom: 9em; 
+/* col- */
+@media only screen and (max-width: 767px) {
+    .sectionExit {
+       margin-bottom: 2em; 
+    }
+}
+
+/* col-sm en adelante */ 
+@media only screen and (min-width: 768px) {
+    .sectionExit {
+       margin-bottom: 2em; 
+    }
 }
 
 .sectionExit .fa-circle {
