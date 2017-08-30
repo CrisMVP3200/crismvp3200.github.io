@@ -24,7 +24,7 @@ function animation() {
 }
 
 function scroll() {
-    $(".goDown a, .sectionExit a").on("click", function(event) {
+    $(".goDown a, .sectionExit a, .navbar .navbar-nav li a").on("click", function(event) {
        if (this.hash !== "") {
            event.preventDefault();
            var hash = this.hash; 

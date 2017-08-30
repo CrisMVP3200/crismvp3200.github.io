@@ -4,6 +4,20 @@ body {
     background-color: #009db0; 
 }
 
+.navbar {
+    color: white;
+    background-color: #f08948; 
+}
+
+.navbar .navbar-brand {
+    color: white; 
+}
+
+.navbar .navbar-nav li a {
+    color: white; 
+}
+
+
 header {
     color: white;
     background-image: url("../images/demo_bulldozer_onepage_head.jpg");
@@ -66,20 +80,22 @@ header {
 section {
     color: white;
     background-color: #009db0; 
-    /* border-bottom: 1px solid #ccc; */ 
+    border-bottom: 1px solid #ccc; 
 }
 
 /* col- */
 @media only screen and (max-width: 767px) {
     section {
-        padding: 2em 0em 1em 0em;
+        /* 2em */
+        padding: 4em 0em 1em 0em;
     } 
 }
 
 /* col-sm en adelante */ 
 @media only screen and (min-width: 768px) {
     section {
-        padding: 4em 0em 1em 0em;
+        /* 4em */
+        padding: 6em 0em 1em 0em;
     } 
 }
 
@@ -131,4 +147,9 @@ section .fullImage {
 
 .sectionExit .fa-chevron-down, .sectionExit .fa-chevron-up {
     color: #009db0; 
+}
+
+footer {
+    color: white; 
+    padding: 2em 1em; 
 }
