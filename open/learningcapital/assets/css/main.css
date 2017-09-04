@@ -1,0 +1,54 @@
+header {
+    padding: 2em 0em; 
+    color: white; 
+    background-image: url("../images/lc_background.png");
+    border-bottom: 1px solid #ccc; 
+}
+
+main {
+    color: white; 
+    padding: 3em 0em; 
+    background-color: #173142; 
+}
+
+main hr {
+    border-color: #ccc; 
+}
+
+.downloadable {
+    border: 1px solid #ccc; 
+    border-radius: 15px; 
+    background-image: url("../images/lc_background.png"); 
+    background-position: center center; 
+    background-size: cover; 
+    padding: 1em; 
+    transition: opacity 0.1s linear 0s; 
+}
+
+.downloadable:hover {
+    opacity: 0.5; 
+}
+
+@media screen and (max-width: 767px) {
+    .downloadable {
+        margin-bottom: 1em; 
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .downloadable {
+        margin-bottom: 1em; 
+    }
+}
+
+.downloadBody a {
+    color: white; 
+    text-decoration: none; 
+}
+
+footer {
+    padding: 2em 0em; 
+    border-top: 1px solid #ccc; 
+    color: white; 
+    background-image: url("../images/lc_background.png");
+}
