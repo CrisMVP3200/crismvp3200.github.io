@@ -5,16 +5,16 @@
     </head>
     <body>
         <video id="my_video_1" width="426px" height="240px" autoplay controls muted>
-	        <source src="https://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4"/>
-        </video>	
+            <source src="https://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4"/>
+        </video>    
     </body>
     <script>
-        document.getElementById("my_video_1").addEventListener("click", myfunc);
-        // document.getElementById("my_video_1").onclick = myfunc; 
- 
+        // document.getElementById("my_video_1").addEventListener("click", myfunc);
+        document.getElementById("my_video_1").onclick = myfunc; 
+
         function myfunc() {
-	        if (this.currentTime > 5) {
-                window.location.href = "https://www.google.com";
+            if (this.currentTime > 5) {
+                location.href = "https://www.google.com";
             };
         }
     </script>
