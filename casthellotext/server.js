@@ -15,6 +15,10 @@ app.get("/index.html", function(req,res){
     res.sendFile(__dirname + "/index.html");
 });
 
+app.get("/receiver.html", function(req, res){
+    res.sendFile(__dirname + "/receiver.html"); 
+});
+
 var server = app.listen(8081, function(){
     var host = server.address().address;
     var port = server.address().port;
